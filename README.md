@@ -1,4 +1,4 @@
-# Information-Collector-v2.0
+# Information Collector v2.0
  
 <p>
 
