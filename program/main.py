@@ -8,6 +8,7 @@ import sys
 #------ GLOBAL VARIABLES ------#
 
 from portscan import PORTSCAN
+from dnsbrute import DNSBRUTE
 
 #------------#
 
@@ -38,5 +39,13 @@ if(question1 == 'P' or question1 == 'p'):
         ps = PORTSCAN(target, 'pattern')
         ps.running_scan()
 else:
-    print('\033[31m' + 'This part has not yet been implemented, but it will soon be.' + '\033[0;0m')
-    sys.exit(1)
+    wlist = input('Small, medium or large word-list?[S/m/l]: ')
+    print('\n' + '-'*59 + '\n')
+    type_in = str(input('[A/AAAA/MX/NS/TXT]: '))
+    print('\n' + '-'*59 + '\n')
+    ds = DNSBRUTE(target, wlist, type_in)
+    ds.running_dbscan()
+    time.sleep(4)
+    ps = PORTSCAN(target, 'pattern')
+    ps.running_scan()
+    time.sleep(4)
