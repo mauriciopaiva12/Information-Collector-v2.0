@@ -3,13 +3,13 @@
 <p>
 
 __*Project dedicated to collecting information in the first stages of a Pentest.<br />
-The project is not yet finished, as I am evolving it as I have time, so it will receive several updates yet.*__
+The project is not yet finalized, as I am evolving over time, so I will still receive several updates.*__
 
 <p>
 
 ---
 
-## Required libraries and installations
+## Required libraries and facilities
 
 <p>
 
@@ -30,7 +30,7 @@ To install them, just copy and paste the following codes into the terminal, reme
 
 <p>
  
-In the list below, it will be possible to view everything that currently exists in the project and everything that I currently intend to implement.<br />
+In the list below it will be possible to view everything that currently exists in the project and everything that I intend to implement currently.<br />
 
 </p>
 
@@ -39,17 +39,17 @@ In the list below, it will be possible to view everything that currently exists 
 ### What exists and what will come:
 
  - [x] PortScan.<br />
- - [ ] DNS Brute Force<br />
+ - [x] DNS brute force<br />
  - [ ] Domain folder discovery<br />
- - [ ] Can save the output<br />
+ - [ ] You can save the output<br />
  
 ---
 
-## PortScan Category and Full Category
+## PortScan category and full category
 
 <p>
  
-*Next, I'll talk a little bit about the categories, both the portscan category and the full category, I'll talk a little bit about how it works and about planning.*
+* Next, I'll talk a little bit about the categories, both the portscan category and the full category, I'll talk a little bit about how it works and about planning. *
 
 </p>
 
@@ -59,19 +59,19 @@ In the list below, it will be possible to view everything that currently exists 
 
 <p>
  
-Within the PortScan category it is possible to do two types of scans, one with the main ports, and the other complete.<br /><br />
-The scan with the main doors presents both the open and closed doors of the desired target, but both are differentiated by color.<br />
-In the full scan, it scans all the target's doors, but with a differential from the other, it presents only the open doors.
+Within the PortScan category it is possible to do two types of scans, one with the main ports and the other complete.<br /><br />
+The scan with the main doors presents the open and closed doors of the desired destination, but both are differentiated by colors.<br />
+In full scan, it scans all the target's ports, but with a differential from the other, it presents only the open ports.
 
 </p>
 
 ---
 
-### Full Category
+### Complete Category
 
 <p>
 
-The complete category is not yet finalized, but soon I will start this part of the project.
+The full category contains Brute Force DNS and a PortScan, with PortScan scanning only the main ports. PortScan differentiates between open and closed doors by color, whereas the Brute Force DNS brings only positive responses.
 
 <p>
 
@@ -81,6 +81,6 @@ The complete category is not yet finalized, but soon I will start this part of t
 
 <p>
  
- Within the moment I will start the construction of the complete category, starting with the Brute Force DNS and bringing it to the repository as soon as possible.
+ As the construction of the Brute Force DNS has been completed, I will start the construction of a domain directory discovery system.
  
 </p>

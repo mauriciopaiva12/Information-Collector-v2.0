@@ -44,13 +44,13 @@ else:
     type_in = str(input('[A/AAAA/MX/NS/TXT]: '))
     print('\n' + '-'*59 + '\n')
     if(wlist == 'M' or wlist == 'm'):
-        db = DNSBRUTE(target, 'm', type_in)
+        db = DNSBRUTE(target, 'medium', type_in)
         db.running()
     elif(wlist == 'L' or wlist == 'l'):
-        db = DNSBRUTE(target, 'l', type_in)
+        db = DNSBRUTE(target, 'large', type_in)
         db.running()
     else:
-        db = DNSBRUTE(target, 's', type_in)
+        db = DNSBRUTE(target, 'small', type_in)
         db.running()
     
     ps = PORTSCAN(target, 'pattern')
