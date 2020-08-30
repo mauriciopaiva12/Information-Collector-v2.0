@@ -14,7 +14,7 @@ from dnsbrute import DNSBRUTE
 
 #------ PRESENTATION ------#
 
-print('\n' + '-'*53 + '\n' + '-'*11 + 'Automated information collector' + '-'*11 + '\n' + '-'*24 + 'V:2.0' + '-'*24 + '\n')
+print('\n' + '-'*53 + '\n' + '-'*11 + 'Automated information collector' + '-'*11 + '\n' + '-'*24 + 'V:2.1' + '-'*24 + '\n')
 print(' - For more information about the application, read the attachment "README.txt" ')
 print('\n' + '-'*59 + '\n')
 
