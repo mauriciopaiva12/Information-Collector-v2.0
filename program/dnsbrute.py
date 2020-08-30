@@ -4,10 +4,6 @@ import time
 
 a = 1
 
-small = '../w_lists/Filenames_or_Directories_Common.wordlist'
-medium = '../w_lists/Filenames_or_Directories_Extra.wordlist'
-big = '../w_lists/Filenames_or_Directories_All.wordlist'
-
 class DNSBRUTE():
     def __init__(self, host, wlist, type_in):
         self.host = host
@@ -15,38 +11,65 @@ class DNSBRUTE():
         self.type_in = type_in
     pass
 
-    def running_dbscan(self):
+    def running(self):
 
         global a
-        global small
-        global medium
-        global big
 
-        
-        if(self.wlist == 'M' or self.wlist == 'm'):
-            wordlist = medium
-        elif(self.wlist == 'L' or self.wlist == 'l'):
-            wordlist = big
-        else:
-            wordlist = small
-
-        try:
-            arq = open(wordlist)
-            subdo = arq.read().splitlines()
-        except:
-            print('\033[31m' + ' For some reason the required file was not found. \nSo DNS Brute will be shut down' + '\033[0;0m')
-            print('\n' + '-'*59 + '\n')
-            time.sleep(5)
-            sys.exit(1)
-
-        if(1 == 1):
-            for subdomain in subdo:
+        if(self.wlist == 'S' or self.wlist == 's'):
+            try:
+                arq = open('../w_lists/Filenames_or_Directories_All.wordlist')
+                subdos = arq.read().splitlines()
+            except:
+                print('\033[31m' + ' Por algum motivo o arquivo nessesário não foi encontrado. \nPortanto o DNS Brute será encerrado' + '\033[0;0m')
+                print('\n' + '-'*59 + '\n')
+                time.sleep(10)
+            for subdo in subdos:
                 try:
-                    target = ('{}.{}'.format(subdomain, self.host))
-                    results = dns.resolver.resolve((target, self.type_in))
+                    alvo = ('{}.{}'.format(subdo, self.host))
+                    results = dns.resolver.resolve(alvo, self.type_in)
                     for result in results:
-                        print('\033[32m' + 'Target: ' + '\033[0;0m' + '{} <----> IP: {} <====> {}'.format(target, result, self.type_in))
+                        print('\033[32m' + 'Alvo: ' + '\033[0;0m' + '{} <----> IP: {} <====> {}'.format(alvo, result, self.type_in))
                         print('\n' + '-'*24 + '\n')
                 except:
                     a += a
                 pass
+        elif(self.wlist == 'M' or self.wlist == 'm'):
+            try:
+                arq = open('../w_lists/Filenames_or_Directories_Extra.wordlist')
+                subdos = arq.read().splitlines()
+            except:
+                print('\033[31m' + ' Por algum motivo o arquivo nessesário não foi encontrado. \nPortanto o DNS Brute será encerrado' + '\033[0;0m')
+                print('\n' + '-'*59 + '\n')
+                time.sleep(10)
+            for subdo in subdos:
+                try:
+                    alvo = ('{}.{}'.format(subdo, self.host))
+                    results = dns.resolver.resolve(alvo, self.type_in)
+                    for result in results:
+                        print('\033[32m' + 'Alvo: ' + '\033[0;0m' + '{} <----> IP: {} <====> {}'.format(alvo, result, self.type_in))
+                        print('\n' + '-'*24 + '\n')
+                except:
+                    a += a
+                pass
+        elif(self.wlist == 'L' or self.wlist == 'l'):
+            try:
+                arq = open('../w_lists/Filenames_or_Directories_All.wordlist')
+                subdos = arq.read().splitlines()
+            except:
+                print('\033[31m' + ' Por algum motivo o arquivo nessesário não foi encontrado. \nPortanto o DNS Brute será encerrado' + '\033[0;0m')
+                print('\n' + '-'*59 + '\n')
+                time.sleep(10)
+            for subdo in subdos:
+                try:
+                    target = ('{}.{}'.format(subdo, self.host))
+                    results = dns.resolver.resolve(alvo, self.type_in)
+                    for results in result:
+                        print('\033[32m' + 'Alvo: ' + '\033[0;0m' + '{} <----> IP: {} <====> {}'.format(target, result, self.type_in))
+                        print('\n' + '-'*24 + '\n')
+                except:
+                    a += a
+                pass
+        else:
+            print('\033[31m' + 'Comando não compativel' + '\033[0;0m')
+            time.sleep(10)
+            sys.exit(1)

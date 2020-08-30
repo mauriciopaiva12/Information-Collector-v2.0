@@ -43,9 +43,15 @@ else:
     print('\n' + '-'*59 + '\n')
     type_in = str(input('[A/AAAA/MX/NS/TXT]: '))
     print('\n' + '-'*59 + '\n')
-    ds = DNSBRUTE(target, wlist, type_in)
-    ds.running_dbscan()
-    time.sleep(4)
+    if(wlist == 'M' or wlist == 'm'):
+        db = DNSBRUTE(target, 'm', type_in)
+        db.running()
+    elif(wlist == 'L' or wlist == 'l'):
+        db = DNSBRUTE(target, 'l', type_in)
+        db.running()
+    else:
+        db = DNSBRUTE(target, 's', type_in)
+        db.running()
+    
     ps = PORTSCAN(target, 'pattern')
     ps.running_scan()
-    time.sleep(4)
