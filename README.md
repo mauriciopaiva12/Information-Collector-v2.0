@@ -1,4 +1,4 @@
-# Information Collector v2.0
+# Information Collector v2.1
  
 <p>
 
@@ -49,7 +49,7 @@ In the list below it will be possible to view everything that currently exists i
 
 <p>
  
-* Next, I'll talk a little bit about the categories, both the portscan category and the full category, I'll talk a little bit about how it works and about planning. *
+*Next, I'll talk a little bit about the categories, both the portscan category and the full category, I'll talk a little bit about how it works and about planning.*
 
 </p>
 
